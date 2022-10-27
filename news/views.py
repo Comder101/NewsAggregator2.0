@@ -9,7 +9,7 @@ toi_soup = BeautifulSoup(toi_r.content, 'html5lib')
 
 toi_headings = toi_soup.find_all('h2')
 
-toi_headings = toi_headings[3:18]
+toi_headings = toi_headings[3:16]
 
 toi_news = []
 
@@ -21,7 +21,7 @@ for th in toi_headings:
 categ_sp= requests.get("https://timesofindia.indiatimes.com/briefs/sports")
 toi_sp = BeautifulSoup(categ_sp.content, 'html5lib')
 toi_hgs = toi_sp.findAll('h2')
-toi_hgs = toi_hgs[3:18] 
+toi_hgs = toi_hgs[3:16] 
 toi_newsp = []
 
 for toi_sp in toi_hgs:
@@ -75,7 +75,7 @@ for ixe_edu in ixe_hgedu:
 categ_tec= requests.get("https://www.gadgetsnow.com/tech-news")
 toi_tec = BeautifulSoup(categ_tec.content, 'html5lib')
 toi_hgtec = toi_tec.findAll("span", {"class": "w_tle"})
-toi_hgtec=toi_hgtec[3:18]
+toi_hgtec=toi_hgtec[3:19]
 toi_newstec=[]
 
 

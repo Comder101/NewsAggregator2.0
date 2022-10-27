@@ -3,26 +3,24 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="refresh" content="80">
     <meta name="keywords" content="news,news-aggregator,,technology">
     <meta name="author" content="TeamBitsAndBytes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Technology</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
-     <style>
-       .bg-img {
-      height: inherit;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-attachment:scroll;
-
+     <style>   #ex {
+      text-align: center;
+      background-image:
+      url("https://img.freepik.com/free-vector/earth-blue-wave-background_1017-36678.jpg?w=1380&t=st=1666879869~exp=1666880469~hmac=126f5ee02f1462729e1a7d14ea2751408d22a4e1fd4dc042be65ff2e6bc3c752");
       background-position: center;
-      background-size: cover;
-      position:fixed;
-      z-index: -1;
-      opacity: 69%;
-    }
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding-left: 5%;
+      padding-right: 5%;
+      opacity: 95%;
+  }
 
        p{font-size: 30px;
           padding-top: 8%;
@@ -56,26 +54,26 @@
          margin-top: 20px;
        }
        .btn:hover{
-           color:darkblue;
+          color: white;
        }
 
        
      </style>
   </head>
 <body>
-  <img class="bg-img" src="{% static 'images/Image.jpeg' %}">
-  <div class="page">
-    <p style="color:black; font-size: 20px; background-color:transparent;width: 800px;margin-top: 0px; padding: 30px;margin-left: -10px;font-weight: 900;">Date:<span id="datetime"></span></p>
+  <!-- <img class="bg-img" src="{% static 'images/Image.jpeg' %}"> -->
+  <div class="page" id="ex">
+    <p style="color:black; font-size: 20px; background-color:transparent;width: 800px;padding: 20px;margin:10px 0px 0px -250px;font-weight: 400;">Date:<span id="datetime"></span></p>
     <script>
       var dt=new Date();
       document.getElementById("datetime").innerHTML=dt.toLocaleString();
     </script>
   <p class="Get">Copyright &copy; </p>
-  <p style="color:white" ></p>
+  <p style="color:white;margin:30px 0px 40px -40px" ></p>
     <div class="jumbotron">
-        <center><h1 style="color:rgb(2, 4, 27);background-color:transparent; margin-top: -90px;font-family:Georgia, 'Times New Roman', Times, serif;font-weight: bolder;font-variant: small-caps;font-size: 40px;"><i>TeamBitsAndBytes_NewsAggregator</i></h1><br>
-            <a href="/" class="btn btn-success" > <h5> &#x2190 Get back to home page </h5> </a>
-          <div id="google_translate_element" style="margin:0px 0px 0px 1030px;background-color: rgb(251, 242, 231);z-index:2;width: 200px;height:fit-content;border-radius: 5%;" ></div>
+        <center><h1 style="color:rgb(2, 4, 27);background-color:transparent; margin-top: -70px;font-family:Georgia, 'Times New Roman', Times, serif;font-weight: bolder;font-variant: small-caps;font-size: 40px;"><i>TeamBitsAndBytes_NewsAggregator</i></h1><br>
+            <a href="/" class="btn  btn-outline-success btn-light" > <h5> &#x2190 Get back to home page </h5> </a>
+          <div id="google_translate_element" style="margin:-40px 0px 0px 1030px;z-index:2;width: 200px;height:fit-content;border-radius: 5%;" ></div>
             <script type="text/javascript">
                 function googleTranslateElementInit() {
                     new google.translate.TranslateElement(

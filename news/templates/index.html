@@ -101,30 +101,18 @@
                                 <li><a class="dropdown-item" href="{% url 'categories_wea'%}">Weather</a></li>
                             </ul>
                         </li> -->
-                    </ul>
-                </div>
-                <div id="google_translate_element" style="margin: 10px 20px 10px 400px"></div>
- 
-                    <script type="text/javascript">
-                        function googleTranslateElementInit() {
-                            new google.translate.TranslateElement(
-                                {pageLanguage: 'en'},
-                                'google_translate_element'
-                            );
-                        }
-                    </script>
+                    <!-- </ul>
+                </div> -->
                 
-                    <script type="text/javascript"
-                            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-                    </script>
 
-                <div class="mx-3 ">
-
+                <div class="mx-3 " >
+                    <div style="margin:0px 0px 0px 620px;">
                     <button class="btn btn-danger mx-3" data-bs-toggle="modal" data-bs-target="#loginModal"> Sign
                         in</button>
                     <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
-
-                </div>
+                    </div>
+                    
+                </div>  
 
 
 
@@ -187,9 +175,9 @@
                             <center>
                                 <button type="submit" class="btn btn-primary my-3">Sign in</button><br>
                                 <label><h6> Continue without signin?</h6></label>
-                                <a href="{% url 'main'%}">Explore</a>
+                                <a href="{% url 'main'%}">Explore</a><br>
                                 
-                            
+                                
                             </center>
                             </div>
                            
@@ -230,30 +218,16 @@
                     <form>
 
 
-                        <div class="input-group my-3">
-                            
-                            
-                            <span class="input-group-text">First name</span>
-                            <input type="text" aria-label="First name" class="form-control">
-                            <!-- <input type="text" aria-label="middle name" class="form-control"> -->
-                            <span class="input-group-text">Last name</span>
-                            <input type="text" aria-label="Last name" class="form-control">
-                        </div>
-                        <!-- <div class="input-group my-3">
-                            <span class="input-group-text">First and last name</span>
-                            <input type="text" aria-label="First name" class="form-control">
-                            <input type="text" aria-label="middle name" class="form-control">
-                            <input type="text" aria-label="Last name" class="form-control">
-                          </div>
-                         -->
+                        
 
 
 
 
-                        <div class="mb-3">
+                        <div class="mb-3"><br>
+                            <label for="fname" class="form-label"> Full Name* </label><br>
+                            <input type="text"class="form-control" id="fname" name="fname" autofocus>
                             <label for="exampleInputEmail1" class="form-label">Email*</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1"
-                                aria-describedby="emailHelp">
+                            <input type="email" class="form-control" id="exampleInputEmail1"aria-describedby="emailHelp">
                             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                         </div>
                         <div class="mb-3">
@@ -314,13 +288,14 @@
                         </div>
                         
                         
+                     
                         <hr>
-                            
-                        <center><button type="submit" class="btn btn-primary my-3">Sign up</button><br>
+                        <center><button type="submit" class="btn btn-primary my-3" style="margin:0px 0px 40px 0px">Sign up</button><br>
                        <label><h6> Continue without signup?</h6></label>
                                 <a href="{% url 'main'%}">Explore</a>
                         </center>
                     </form>
+                    <br>
                     
 
 
@@ -344,8 +319,8 @@ s
  -->
 
     <span>
-        <div class="date datetime container  text-primary my-1 gap-2 col-4 mx-3">
-            <p id="demo"></p>
+        <div class="date datetime container  text-black my-1 gap-2 col-4 ">
+            <p id="demo" style="margin-left: -500px;"></p>
 
             <script>
                 const d = new Date();
@@ -354,6 +329,21 @@ s
 
         </div>
     </span>
+    <div id="google_translate_element" style="margin:-35px 0px 0px 1350px;">
+ 
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
+
+    <script type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+    </div>
 
 
 
@@ -368,14 +358,13 @@ s
 
 
     <div class="container">
-        <div class="container-sm  my-3 d-flex justify-content-evenly">
+        <div class="container-sm d-flex justify-content-evenly">
             <div class="card" style="width: 18rem;">
                 <img src="https://th.bing.com/th/id/OIP.yeMo41tHDK25CFa6f9oGdgAAAA?pid=ImgDet&rs=1"
                     class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Politics</h5>
-                    <p class="card-text">Politics is the set of activities that are associated with making decisions in forms of power relations among individuals, such as the distribution of resources or status.</p>
-                    <a href="{% url 'categories_po'%}" class="btn btn-primary">Explore more in Politics ..</a>
+                    
+                    <a href="{% url 'categories_po'%}" class="btn btn-outline-primary btn-light">Explore more  in Politics ..</a>
                 </div>
             </div>
 
@@ -383,9 +372,9 @@ s
                 <img src="https://image.freepik.com/free-vector/sport-equipment-concept_1284-13034.jpg?w=740"
                     class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Sports</h5>
-                    <p class="card-text">Sport pertains to any form of competitive physical activity that aims to use, improve physical ability and skills while providing entertainment to spectators. </p> 
-                    <a href="{% url 'categories_sp'%}" class="btn btn-primary">Explore more in Sports ..</a>
+                    
+                   
+                    <a href="{% url 'categories_sp'%}" class="btn btn-outline-primary btn-light">Explore more in Sports ..</a>
                 </div>
             </div>
 
@@ -394,33 +383,30 @@ s
                 <img src="https://beerconnoisseur.com/sites/default/files/blogs/2021/tips_for_education/number-education-classroom-brand-font-school-1201352-pxhere.com_.jpg?slideshow=true&slideshowAuto=true&slideshowSpeed=4000&speed=350&transition=elastic"
                     class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Education</h5>
-                    <p class="card-text">Education is the process of facilitating learning, or the acquisition of knowledge, skills, values, morals, beliefs, habits, and personal development. </p>
-                    <a href="{% url 'categories_edu'%}" class="btn btn-primary">Explore more in Education ..</a>
+                  
+                    
+                    <a href="{% url 'categories_edu'%}" class="btn btn-outline-primary btn-light">Explore more in Education ..</a>
                 </div>
             </div>
 
         </div>
 
 
-        <div class="container-sm cat2 d-flex justify-content-evenly my-5">
+        <div class="container-sm cat2 d-flex justify-content-evenly">
             <div class="card" style="width: 20rem;">
                 <img src="https://www.luminadatamatics.com/wp-content/uploads/2020/10/immersive_technology_services.jpg"
                     class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Technology</h5>
-                    <p class="card-text">Technology is the continually developing result of accumulated knowledge and application in all techniques, skills, methods used in scientific research. </p> 
-                    <a href= "{% url 'categories_tec'%}" class="btn btn-primary">Explore more in Technology ..</a>
+                  
+                    <a href= "{% url 'categories_tec'%}" class="btn btn-outline-primary btn-light">Explore more in Technology ..</a>
                 </div>
             </div>
 
             <div class="card" style="width: 20rem;">
                 <img src="https://th.bing.com/th/id/OIP.XWVtQyegBvTmQPXSYOAVZwHaEc?w=308&h=184&c=7&r=0&o=5&dpr=1.25&pid=1.7" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Weather</h5>
-                    <p class="card-text">Weather is the state of the atmosphere, describing the degree to
-                        which it is hot or cold, wet or dry, calm or stormy, clear or cloudy. </p>
-                    <a href="{% url 'categories_wea'%}" class="btn btn-primary">Explore more in Weather ..</a>
+                     
+                    <a href="{% url 'categories_wea'%}" class="btn btn-outline-primary btn-light">Explore more in Weather ..</a>
                 </div>
             </div>
 
